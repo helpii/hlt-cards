@@ -14,8 +14,9 @@ module.exports = {
       backgroundImage: {
         galaxy: 'url("/background-galaxy.png")',
         helplit: 'url("/helplit.png")',
-        'nlw-gradient': 'linear-gradient(180deg, #9572FC, #E1D55D)',
-        'game-gradient': 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 67.08%)',
+        'apren-lud': 'linear-gradient(180deg, #9572FC, #eeeeee)',
+        'sala-inv': 'linear-gradient(180deg, #7c32fd, #eeeeee)',
+        'pen-comput': 'linear-gradient(180deg, #4ab8FC, #eeeeee)',
       }
     },
   },
