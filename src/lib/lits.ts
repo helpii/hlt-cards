@@ -5,6 +5,7 @@ export default [
     author: "JM",
     stage: "Aprendizagem Lúdica",
     picturePath: "/litImages/h.png",
+    classPlanUrl: "https://helplit.com.br",
   },
   {
     title: "O dia em que o H fugiu do alfabeto.",
@@ -12,6 +13,7 @@ export default [
     author: "Ro",
     stage: "Aprendizagem Lúdica",
     picturePath: "/litImages/h.png",
+    classPlanUrl: "https://helplit.com.br",
   },
   {
     title: "O dia em que o H fugiu do alfabeto.",
@@ -19,5 +21,6 @@ export default [
     author: "Tamara",
     stage: "Aprendizagem Lúdica",
     picturePath: "/litImages/h.png",
+    classPlanUrl: "https://helplit.com.br",
   },
 ].sort(() => Math.random() - 0.5);
