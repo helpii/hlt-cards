@@ -1,5 +1,5 @@
 import lits from "../../lib/lits";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import shift from "classnames";
 /**
  *
@@ -8,7 +8,7 @@ import shift from "classnames";
  */
 export function Home() {
   const [litIndex, setLitIndex] = useState(0);
-  const [accent, setAccent] = useState("#f4f4f4");
+
   return (
     <>
       {/*GradientBG //use custom styling with classnames*/}
@@ -16,14 +16,26 @@ export function Home() {
         className={shift(
           "transition-colors ease-in-out flex flex-col justify-center items-center h-[100vh] w-[100%]",
           {
-            "bg-apren-lud": lits[litIndex].author === "JM",
-            "bg-sala-inv": lits[litIndex].author === "Tamara",
-            "bg-pen-comput": lits[litIndex].author === "Ro",
+            "bg-aprenlud": lits[litIndex].author === "Helplit",
+            "bg-salainv": lits[litIndex].author === "Tamara",
+            "bg-pen-comput": lits[litIndex].author === "Rosangela",
           }
         )}
       >
         {/*LitCard*/}
-        <div className="rounded-b-2xl border-b-8 border-[#b9b9b9] hover:cursor-pointer hover:border-cyan-500 rounded-xl bg-white w-[401px] pt-[6px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors">
+        <div
+          className={shift(
+            "rounded-b-2xl border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl bg-white w-[401px] pt-[6px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
+            {
+              "border-aprenlud2 hover:border-aprenlud1":
+                lits[litIndex].author === "Helplit",
+              "border-salainv2 hover:border-salainv1":
+                lits[litIndex].author === "Tamara",
+              "border-pencomput2 hover:border-pencomput1":
+                lits[litIndex].author === "Rosangela",
+            }
+          )}
+        >
           <a href={lits[litIndex].classPlanUrl} target="blank">
             <img
               className="rounded-lg"
@@ -33,9 +45,9 @@ export function Home() {
             />
           </a>
           {/*Lower Card Section*/}
-          <div className="my-4">
-            <h1>{lits[litIndex].author}</h1>
-            <h1>{litIndex}</h1>
+          <div className="my-4 flex flex-col items-center">
+            <h1 className="text-lg mb-2">{lits[litIndex].title}</h1>
+            <p className="text-center">{lits[litIndex].subtitle}</p>
           </div>
         </div>
 
