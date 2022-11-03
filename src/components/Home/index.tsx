@@ -39,7 +39,7 @@ export function Home() {
         >
           <a href={lits[litIndex].classPlanUrl} target="blank">
             <img
-              className="rounded-lg"
+              className="rounded-lg mx-[6px]"
               src={lits[litIndex].picturePath}
               width="389"
               height="257"
