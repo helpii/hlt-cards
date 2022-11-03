@@ -1,6 +1,6 @@
-import { MagnifyingGlassPlus } from "phosphor-react";
-
 import { useState, useEffect } from "react";
+
+import "./styles/main.css";
 
 export default function App() {
   const [isLoading, setLoading] = useState(true);
@@ -24,15 +24,7 @@ export default function App() {
 
   return (
     <div className="flex justify-center align-middle">
-      <h1>Hello React</h1>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
-      <img
-        src="https://avatars2.githubusercontent.com/u/39895671?s=400"
-        alt="react-icon"
-      />
+      <h1>this is Home</h1>
     </div>
   );
 }
