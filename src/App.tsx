@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { GradientBG } from "./components/GradientBG";
 
 import "./styles/main.css";
 
@@ -24,7 +25,7 @@ export default function App() {
 
   return (
     <div className="flex justify-center align-middle">
-      <h1>this is Home</h1>
+      <GradientBG />
     </div>
   );
 }
