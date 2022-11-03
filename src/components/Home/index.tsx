@@ -1,9 +1,8 @@
 import lits from "../../lib/lits";
-import shift from "classnames";
 import { useState } from "react";
+
 export function Home() {
   const [litIndex, setLitIndex] = useState(0);
-  //save lit list index with useState
   return (
     <>
       {/*GradientBG //use custom styling with classnames*/}

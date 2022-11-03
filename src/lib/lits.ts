@@ -4,7 +4,7 @@ export default [
     subtitle: "Fugiu por quê? Para onde foi? Investigue com a turma.",
     author: "JM",
     stage: "Aprendizagem Lúdica",
-    picturePath: "/litImages/h.png",
+    picturePath: "/litImages/h0.png",
     classPlanUrl: "https://helplit.com.br",
   },
   {
@@ -12,7 +12,7 @@ export default [
     subtitle: "Fugiu por quê? Para onde foi? Investigue com a turma.",
     author: "Ro",
     stage: "Aprendizagem Lúdica",
-    picturePath: "/litImages/h.png",
+    picturePath: "/litImages/h1.png",
     classPlanUrl: "https://helplit.com.br",
   },
   {
@@ -20,7 +20,7 @@ export default [
     subtitle: "Fugiu por quê? Para onde foi? Investigue com a turma.",
     author: "Tamara",
     stage: "Aprendizagem Lúdica",
-    picturePath: "/litImages/h.png",
+    picturePath: "/litImages/h2.png",
     classPlanUrl: "https://helplit.com.br",
   },
 ].sort(() => Math.random() - 0.5);
