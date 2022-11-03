@@ -26,7 +26,7 @@ export function Home() {
         {/*LitCard*/}
         <div
           className={shift(
-            "rounded-b-2xl border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl bg-white w-[401px] pt-[6px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
+            "rounded-b-2xl border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] pt-[6px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
             {
               "border-aprenlud2 hover:border-aprenlud1":
                 lits[litIndex].author === "Helplit",
