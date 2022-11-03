@@ -6,7 +6,7 @@ export function Home() {
   return (
     <>
       {/*GradientBG //use custom styling with classnames*/}
-      <div className="max-w-[1344px] transition-colors flex flex-col justify-center items-center bg-nlw-gradient h-[100vh] w-[100%]">
+      <div className="transition-colors flex flex-col justify-center items-center bg-nlw-gradient h-[100vh] w-[100%]">
         {/*LitCard*/}
         <div>
           <h1>{lits[litIndex].author}</h1>
