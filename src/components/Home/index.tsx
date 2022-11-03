@@ -1,6 +1,7 @@
 import lits from "../../lib/lits";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import shift from "classnames";
+import { ArrowCircleLeft, ArrowCircleRight } from "phosphor-react";
 /**
  *
  * escolher umas 5 accent colors legais e fazer o GradientBG adotar um gradiente do branco a elas, pelo classnames
@@ -52,7 +53,7 @@ export function Home() {
         </div>
 
         {/*NavigationOptions*/}
-        <div>
+        <div className="flex flex-row text-white">
           {/*PreviousCardButton*/}
           <button
             onClick={() => {
@@ -63,7 +64,7 @@ export function Home() {
               }
             }}
           >
-            Prev
+            <ArrowCircleLeft size={48} weight="bold" />
           </button>
           {/*NextCardButton*/}
           <button
@@ -75,7 +76,7 @@ export function Home() {
               }
             }}
           >
-            Next
+            <ArrowCircleRight size={48} weight="bold" />
           </button>
         </div>
       </div>
