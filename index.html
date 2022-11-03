@@ -14,8 +14,8 @@
     <title>Palcos Helplit</title>
     <style>
       .loader {
-        border: 16px solid #f3f3f3;
-        border-top: 16px solid #fdc569;
+        border: 16px solid #ffffff;
+        border-top: 16px solid #FA8860;
         border-radius: 50%;
         width: 130px;
         height: 130px;
@@ -26,6 +26,15 @@
         margin-top: -65px; /* Negative half of height. */
         margin-left: -65px; /* Negative half of width. */
       }
+      .loaderbg {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 50%;
+        left: 49%;
+        margin-top: -50px; /* Negative half of height. */
+        margin-left: -50px; /* Negative half of width. */
+      }
       
       @keyframes spin {
         0%  { transform: rotate(0deg); }
@@ -33,9 +42,10 @@
       }
       </style>
   </head>
-  <body class="bg-[#121214] bg-galaxy bg-cover bg-no-repeat">
+  <body class="bg-[#FBC366]">
     <div id="root"></div>
     <div class="loader-container">
+      <div class="loaderbg bg-helplit bg-cover"></div>
       <div class="loader"></div>
    </div>
     <script type="module" src="/src/main.tsx"></script>
