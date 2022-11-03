@@ -26,7 +26,7 @@ export function Home() {
         {/*LitCard*/}
         <div
           className={shift(
-            "rounded-b-2xl border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] pt-[6px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
+            "rounded-b-2xl border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-[12px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
             {
               "border-aprenlud2 hover:border-aprenlud1":
                 lits[litIndex].author === "Helplit",
@@ -39,16 +39,16 @@ export function Home() {
         >
           <a href={lits[litIndex].classPlanUrl} target="blank">
             <img
-              className="rounded-lg mx-[6px]"
+              className="rounded-lg"
               src={lits[litIndex].picturePath}
               width="389"
               height="257"
             />
           </a>
           {/*Lower Card Section*/}
-          <div className="my-4 flex flex-col items-center">
+          <div className="my-4 flex flex-col items-center p-2 text-center">
             <h1 className="text-lg mb-2">{lits[litIndex].title}</h1>
-            <p className="text-center">{lits[litIndex].subtitle}</p>
+            <p>{lits[litIndex].subtitle}</p>
           </div>
         </div>
 
