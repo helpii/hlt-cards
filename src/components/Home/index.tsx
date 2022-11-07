@@ -1,12 +1,18 @@
 import lits from "../../lib/lits";
-//import lits especificas pra cada palco
-import { useState } from "react";
+import apr_lud from "../../lib/stages/apr_lud";
+import sal_inv from "../../lib/stages/sal_inv";
+import pen_com from "../../lib/stages/pen_com";
+
+import { useState, useEffect } from "react";
 import shift from "classnames";
 import {
   ArrowCircleLeft,
   ArrowCircleRight,
   GearSix,
+  HandPalm,
   MagnifyingGlass,
+  Robot,
+  Rocket,
   StackSimple,
   User,
 } from "phosphor-react";
@@ -17,13 +23,18 @@ export function Home() {
   const [litIndex, setLitIndex] = useState(0);
   const [litList, setLitList] = useState(lits);
   const [choosingStage, setChoosingStage] = useState(false);
-  const { stage, setStage } = useStage();
+  const { stage } = useStage();
 
-  function updateLitList() {
+  useEffect(() => {
     setLitIndex(0);
-    //if HELPLIT, aprenlud, salainv...
-    //   troca com setLitList(..) dos outros imports
-  }
+    if (stage === "APR_LUD") {
+      setLitList(apr_lud);
+    } else if (stage === "PEN_COM") {
+      setLitList(pen_com);
+    } else if (stage === "SAL_INV") {
+      setLitList(sal_inv);
+    }
+  }, [stage]);
 
   return (
     <>
@@ -50,10 +61,10 @@ export function Home() {
               }
             )}
           >
-            <a href={lits[litIndex].classPlanUrl} target="blank">
+            <a href={litList[litIndex].classPlanUrl} target="blank">
               <img
                 className="rounded-lg"
-                src={lits[litIndex].picturePath}
+                src={litList[litIndex].picturePath}
                 width="389"
                 height="257"
               />
@@ -67,9 +78,9 @@ export function Home() {
                   "border-pencomput1": stage === "PEN_COM",
                 })}
               >
-                {lits[litIndex].title}
+                {litList[litIndex].title}
               </h1>
-              <p>{lits[litIndex].subtitle}</p>
+              <p>{litList[litIndex].subtitle}</p>
             </div>
             {/*Card Footer Info*/}
             <div className="text-helplit2 w-[100%] mt-2 flex flex-row justify-between items-center">
@@ -83,28 +94,27 @@ export function Home() {
                   }
                 )}
               >
-                <div className="bg-helplit_sm w-6 h-6 bg-cover rounded-md"></div>
+                <div className="bg-helplit_sm w-8 h-8 bg-cover rounded-full"></div>
                 <p>@helplit</p>
               </div>
               <div
                 className={shift(
                   "py-1 px-4 rounded-2xl font-semibold text-sm text-white flex flex-row items-center gap-2",
                   {
-                    "bg-aprenlud2": lits[litIndex].author === "Helplit",
-                    "bg-salainv2": lits[litIndex].author === "Tamara",
-                    "bg-pencomput2": lits[litIndex].author === "Rosangela",
+                    "bg-aprenlud2": litList[litIndex].author === "Helplit",
+                    "bg-salainv2": litList[litIndex].author === "Tamara",
+                    "bg-pencomput2": litList[litIndex].author === "Rosangela",
                   }
                 )}
               >
                 <>
                   <StackSimple size={22} color="white" weight="bold" />
-                  <p>{lits[litIndex].stage}</p>
+                  <p>{litList[litIndex].stage}</p>
                 </>
               </div>
             </div>
           </div>
         )}
-        {/*LitCard*/}
 
         {/*NavigationOptions*/}
         <div className="w-[100%] max-w-[401px] flex flex-row text-white justify-between items-center ">
@@ -156,7 +166,7 @@ export function Home() {
             </button>
             <button
               onClick={() =>
-                toast("Busca de lits... em breve.", {
+                toast("Busca de litList... em breve.", {
                   icon: "🃏🎴",
                 })
               }
@@ -182,7 +192,7 @@ export function Home() {
                 if (litIndex > 0) {
                   setLitIndex(litIndex - 1);
                 } else {
-                  setLitIndex(lits.length - 1);
+                  setLitIndex(litList.length - 1);
                 }
               }}
             >
@@ -194,7 +204,7 @@ export function Home() {
             </button>
             <button
               onClick={() => {
-                if (litIndex < lits.length - 1) {
+                if (litIndex < litList.length - 1) {
                   setLitIndex(litIndex + 1);
                 } else {
                   setLitIndex(0);
@@ -215,12 +225,38 @@ export function Home() {
 }
 
 const StageSelector = () => {
+  const { setStage } = useStage();
   return (
     <div className="max-w-[90%] w-[401px] p-2 h-[500px] max-h-[80vh] mb-4 flex flex-col justify-center ">
       {/*Lower Card Section*/}
-      <div className="flex flex-row text-white text-2xl font-black gap-8">
+      <div className="flex flex-row text-white text-2xl font-black gap-8 mb-4">
         <p className="">leve-me a um palco</p>
         <p className="rotate-90 font-semibold">:)</p>
+      </div>
+      <div className="py-1 px-4 rounded-2xl flex flex-col font-semibold text-sm text-helplit2 items-start gap-2">
+        <>
+          <div
+            onClick={() => setStage("APR_LUD")}
+            className="bg-white rounded-full py-1 px-2 gap-1 text-aprenlud2 flex flex-row hover:opacity-90 cursor-pointer"
+          >
+            <Rocket size={22} weight="bold" />
+            <p>Aprendizagem Lúdica</p>
+          </div>
+          <div
+            onClick={() => setStage("PEN_COM")}
+            className="bg-white rounded-full py-1 px-2 gap-1 text-pencomput2 flex flex-row hover:opacity-90 cursor-pointer"
+          >
+            <Robot size={22} weight="bold" />
+            <p>Pensamento Computacional</p>
+          </div>
+          <div
+            onClick={() => setStage("SAL_INV")}
+            className="bg-white rounded-full py-1 px-2 gap-1 text-salainv2 flex flex-row hover:opacity-90 cursor-pointer"
+          >
+            <HandPalm size={22} weight="bold" />
+            <p>Sala Invertida</p>
+          </div>
+        </>
       </div>
       <div></div>
     </div>
