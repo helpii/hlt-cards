@@ -10,19 +10,19 @@ module.exports = {
     },
     extend: {
       colors:{
-        'aprenlud1': '#fdc17f',
-        'aprenlud2': '#f12f86',
-        'salainv1': '#ec7ffd',
-        'salainv2': '#2d44f1',
-        'pencomput1': '#fbc366',
-        'pencomput2': '#f1322f',
+        'aprenlud1': '#fbc366',
+        'aprenlud2': '#f27d54',
+        'salainv1': '#74bcd8',
+        'salainv2': '#2e95be',
+        'pencomput1': '#74d888',
+        'pencomput2': '#2cb865',
       },
       backgroundImage: {
         galaxy: 'url("/background-galaxy.png")',
         helplit: 'url("/helplit.png")',
-        'aprenlud': 'linear-gradient(180deg, #fdc17f, #f12f86)',
-        'salainv': 'linear-gradient(180deg, #ec7ffd, #2d44f1)',
-        'pen-comput': 'linear-gradient(180deg, #fbc366, #f1322f)',
+        'aprenlud': 'linear-gradient(180deg, #fbc366, #f27d54)',
+        'salainv': 'linear-gradient(180deg, #74bcd8, #2e95be)',
+        'pen-comput': 'linear-gradient(180deg, #74d888, #2cb865)',
       }
     },
   },

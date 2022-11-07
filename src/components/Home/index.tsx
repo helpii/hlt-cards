@@ -26,14 +26,11 @@ export function Home() {
         {/*LitCard*/}
         <div
           className={shift(
-            "rounded-b-2xl border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-[12px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
+            "rounded-b-3xl border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-[12px] h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
             {
-              "border-aprenlud2 hover:border-aprenlud1":
-                lits[litIndex].author === "Helplit",
-              "border-salainv2 hover:border-salainv1":
-                lits[litIndex].author === "Tamara",
-              "border-pencomput2 hover:border-pencomput1":
-                lits[litIndex].author === "Rosangela",
+              " hover:border-aprenlud1": lits[litIndex].author === "Helplit",
+              " hover:border-salainv1": lits[litIndex].author === "Tamara",
+              " hover:border-pencomput1": lits[litIndex].author === "Rosangela",
             }
           )}
         >
@@ -50,6 +47,7 @@ export function Home() {
             <h1 className="text-lg mb-2">{lits[litIndex].title}</h1>
             <p>{lits[litIndex].subtitle}</p>
           </div>
+          {/*Card Footer Info*/}
         </div>
 
         {/*NavigationOptions*/}
