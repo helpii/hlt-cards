@@ -1,6 +1,6 @@
 export default [
   {
-    title: "O dia em que o H sumiu do alfabeto.",
+    title: "O dia em que o H sumiu do alfabeto",
     subtitle: "Será que fugiu? Para onde foi? Investigue com a turma.",
     author: "Helplit",
     stage: "Aprendizagem Lúdica",
@@ -9,8 +9,8 @@ export default [
     accent: "#FA8860",
   },
   {
-    title: "O dia em que o H fugiu do alfabeto.",
-    subtitle: "Fugiu por quê? Para onde foi?",
+    title: "Nasce um Robô",
+    subtitle: "Promova a evolução do mais novo colega de metal dos alunos.",
     author: "Rosangela",
     stage: "Pensamento Computacional",
     picturePath: "/litImages/h1.png",
@@ -18,8 +18,9 @@ export default [
     accent: "#3781e0",
   },
   {
-    title: "O dia em que o H fugiu do alfabeto.",
-    subtitle: "Fugiu por quê? Para onde foi? Investigue com a turma.",
+    title: "Desenho favorito",
+    subtitle:
+      "Aprenda sobre as histórias mais inspiradoras para os alunos... e cuidado com os spoilers!",
     author: "Tamara",
     stage: "Sala Invertida",
     picturePath: "/litImages/h2.png",

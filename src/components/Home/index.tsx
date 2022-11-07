@@ -17,6 +17,7 @@ export function Home() {
   const [litIndex, setLitIndex] = useState(0);
   const [litList, setLitList] = useState(lits);
   const [choosingStage, setChoosingStage] = useState(false);
+  const { stage, setStage } = useStage();
 
   function updateLitList() {
     setLitIndex(0);
@@ -28,11 +29,11 @@ export function Home() {
     <>
       <div
         className={shift(
-          "select-none transition-colors ease-in-out flex flex-col p-6 items-center justify-center h-[100vh] w-[100%]",
+          "select-none bg-helplit transition-colors ease-in-out flex flex-col p-6 items-center justify-center h-[100vh] w-[100%]",
           {
-            "bg-aprenlud": lits[litIndex].author === "Helplit",
-            "bg-salainv": lits[litIndex].author === "Tamara",
-            "bg-pen-comput": lits[litIndex].author === "Rosangela",
+            "bg-aprenlud": stage === "APR_LUD",
+            "bg-salainv": stage === "SAL_INV",
+            "bg-pen-comput": stage === "PEN_COM",
           }
         )}
       >
@@ -41,12 +42,11 @@ export function Home() {
         ) : (
           <div
             className={shift(
-              "rounded-b-[30px] border-b-8 hover:bg-[#f7f7f7] border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h-[500px] max-h-[80vh] mb-4 flex flex-col justify-between items-center transition-colors",
+              "rounded-b-[30px] hover:border-helplit1 border-b-8 hover:bg-[#f7f7f7] border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h-[500px] max-h-[80vh] mb-4 flex flex-col justify-between items-center transition-colors",
               {
-                "hover:border-aprenlud1": lits[litIndex].author === "Helplit",
-                "hover:border-salainv1": lits[litIndex].author === "Tamara",
-                "hover:border-pencomput1":
-                  lits[litIndex].author === "Rosangela",
+                "hover:border-salainv1": stage === "SAL_INV",
+                "hover:border-aprenlud1": stage === "APR_LUD",
+                "hover:border-pencomput1": stage === "PEN_COM",
               }
             )}
           >
@@ -61,10 +61,10 @@ export function Home() {
             {/*Lower Card Section*/}
             <div className="flex flex-col items-center p-2 text-center">
               <h1
-                className={shift("text-lg mb-1 border-b-2", {
-                  "border-aprenlud1": lits[litIndex].author === "Helplit",
-                  "border-salainv1": lits[litIndex].author === "Tamara",
-                  "border-pencomput1": lits[litIndex].author === "Rosangela",
+                className={shift("text-lg mb-1 border-b-2 border-helplit1", {
+                  "border-salainv1": stage === "SAL_INV",
+                  "border-aprenlud1": stage === "APR_LUD",
+                  "border-pencomput1": stage === "PEN_COM",
                 })}
               >
                 {lits[litIndex].title}
@@ -72,14 +72,14 @@ export function Home() {
               <p>{lits[litIndex].subtitle}</p>
             </div>
             {/*Card Footer Info*/}
-            <div className="w-[100%] mt-2 flex flex-row justify-between items-center">
+            <div className="text-helplit2 w-[100%] mt-2 flex flex-row justify-between items-center">
               <div
                 className={shift(
                   "font-semibold flex flex-row gap-1 items-center ",
                   {
-                    "text-aprenlud2": lits[litIndex].author === "Helplit",
-                    "text-salainv2": lits[litIndex].author === "Tamara",
-                    "text-pencomput2": lits[litIndex].author === "Rosangela",
+                    "text-aprenlud2": stage === "APR_LUD",
+                    "text-salainv2": stage === "SAL_INV",
+                    "text-pencomput2": stage === "PEN_COM",
                   }
                 )}
               >
@@ -88,7 +88,7 @@ export function Home() {
               </div>
               <div
                 className={shift(
-                  "py-1 px-4 rounded-2xl font-semibold text-sm text-white flex flex-row items-center gap-2  hover:opacity-80",
+                  "py-1 px-4 rounded-2xl font-semibold text-sm text-white flex flex-row items-center gap-2",
                   {
                     "bg-aprenlud2": lits[litIndex].author === "Helplit",
                     "bg-salainv2": lits[litIndex].author === "Tamara",
@@ -144,11 +144,14 @@ export function Home() {
               <StackSimple
                 size={40}
                 weight="bold"
-                className={shift("rounded-full hover:opacity-80 bg-white p-1", {
-                  "text-aprenlud2": lits[litIndex].author === "Helplit",
-                  "text-salainv2": lits[litIndex].author === "Tamara",
-                  "text-pencomput2": lits[litIndex].author === "Rosangela",
-                })}
+                className={shift(
+                  "text-helplit2 rounded-full hover:opacity-80 bg-white p-1",
+                  {
+                    "text-aprenlud2": stage === "APR_LUD",
+                    "text-salainv2": stage === "SAL_INV",
+                    "text-pencomput2": stage === "PEN_COM",
+                  }
+                )}
               />
             </button>
             <button
@@ -161,11 +164,14 @@ export function Home() {
               <MagnifyingGlass
                 size={40}
                 weight="bold"
-                className={shift("rounded-full hover:opacity-80 bg-white p-1", {
-                  "text-aprenlud2": lits[litIndex].author === "Helplit",
-                  "text-salainv2": lits[litIndex].author === "Tamara",
-                  "text-pencomput2": lits[litIndex].author === "Rosangela",
-                })}
+                className={shift(
+                  "text-helplit2 rounded-full hover:opacity-80 bg-white p-1",
+                  {
+                    "text-aprenlud2": stage === "APR_LUD",
+                    "text-salainv2": stage === "SAL_INV",
+                    "text-pencomput2": stage === "PEN_COM",
+                  }
+                )}
               />
             </button>
           </div>
@@ -212,8 +218,8 @@ const StageSelector = () => {
   return (
     <div className="max-w-[90%] w-[401px] p-2 h-[500px] max-h-[80vh] mb-4 flex flex-col justify-center ">
       {/*Lower Card Section*/}
-      <div className="flex flex-row border-b-4 text-white text-3xl font-black gap-8">
-        <p className="">Escolha um palco</p>
+      <div className="flex flex-row text-white text-2xl font-black gap-8">
+        <p className="">leve-me a um palco</p>
         <p className="rotate-90 font-semibold">:)</p>
       </div>
       <div></div>
