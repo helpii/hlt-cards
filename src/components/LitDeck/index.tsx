@@ -1,5 +1,5 @@
 import { useStage } from "../../contexts/StageContext";
-import { useDrawed } from "../../contexts/DrawedContext";
+import { useDrawed } from "../../contexts/CardsContext";
 
 import festivalDeck from "../../lib/lits";
 import apr_lud from "../../lib/stages/apr_lud";
@@ -58,10 +58,10 @@ export function LitDeck() {
       {/*Lower Card Section*/}
       <div className="flex flex-col items-center p-2 text-center">
         <h1
-          className={shift("text-lg mb-1 border-b-2 border-helplit1", {
-            "border-salainv1": stage === "SAL_INV",
-            "border-aprenlud1": stage === "APR_LUD",
-            "border-pencomput1": stage === "PEN_COM",
+          className={shift("text-lg mb-1 border-b-2 border-b-helplit1", {
+            "border-b-salainv1": stage === "SAL_INV",
+            "border-b-aprenlud1": stage === "APR_LUD",
+            "border-b-pencomput1": stage === "PEN_COM",
           })}
         >
           {litList[drawed].title}

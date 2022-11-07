@@ -1,27 +1,25 @@
 import { createContext, ReactNode, useContext } from "react";
 import { useState } from "react";
 
-type DrawedContextData = {
+type CardsContextData = {
   drawed: number;
   setDrawed: (param: number) => void;
   deckSize: number;
   setDeckSize: (param: number) => void;
 };
 
-export const DrawedContext = createContext({} as DrawedContextData);
+export const CardsContext = createContext({} as CardsContextData);
 
-type DrawedContextProviderProps = {
+type CardsContextProviderProps = {
   children: ReactNode;
 };
 
-export function DrawedContextProvider({
-  children,
-}: DrawedContextProviderProps) {
+export function CardsContextProvider({ children }: CardsContextProviderProps) {
   const [drawed, setDrawed] = useState(0);
   const [deckSize, setDeckSize] = useState(0);
 
   return (
-    <DrawedContext.Provider
+    <CardsContext.Provider
       value={{
         drawed,
         setDrawed,
@@ -30,10 +28,10 @@ export function DrawedContextProvider({
       }}
     >
       {children}
-    </DrawedContext.Provider>
+    </CardsContext.Provider>
   );
 }
 
 export const useDrawed = () => {
-  return useContext(DrawedContext);
+  return useContext(CardsContext);
 };

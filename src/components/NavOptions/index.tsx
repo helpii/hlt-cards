@@ -10,7 +10,7 @@ import shift from "classnames";
 
 import { toast } from "react-hot-toast";
 import { useStage } from "../../contexts/StageContext";
-import { useDrawed } from "../../contexts/DrawedContext";
+import { useDrawed } from "../../contexts/CardsContext";
 
 export function NavOptions() {
   const { drawed, setDrawed, deckSize } = useDrawed();

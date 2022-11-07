@@ -4,17 +4,17 @@ import App from "./App";
 import { Toaster } from "react-hot-toast";
 
 import { StageContextProvider } from "./contexts/StageContext";
-import { DrawedContextProvider } from "./contexts/DrawedContext";
+import { CardsContextProvider } from "./contexts/CardsContext";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <>
-      <DrawedContextProvider>
+      <CardsContextProvider>
         <StageContextProvider>
           <Toaster position="top-center" />
           <App />
         </StageContextProvider>
-      </DrawedContextProvider>
+      </CardsContextProvider>
     </>
   </React.StrictMode>
 );
