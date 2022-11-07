@@ -8,6 +8,7 @@ import shift from "classnames";
 import {
   ArrowCircleLeft,
   ArrowCircleRight,
+  FireSimple,
   GearSix,
   HandPalm,
   MagnifyingGlass,
@@ -27,12 +28,16 @@ export function Home() {
 
   useEffect(() => {
     setLitIndex(0);
+    setChoosingStage(false);
     if (stage === "APR_LUD") {
       setLitList(apr_lud);
     } else if (stage === "PEN_COM") {
       setLitList(pen_com);
     } else if (stage === "SAL_INV") {
       setLitList(sal_inv);
+    } else {
+      //HELPLIT
+      setLitList(lits);
     }
   }, [stage]);
 
@@ -166,7 +171,7 @@ export function Home() {
             </button>
             <button
               onClick={() =>
-                toast("Busca de litList... em breve.", {
+                toast("Busca de lits... em breve.", {
                   icon: "🃏🎴",
                 })
               }
@@ -235,6 +240,13 @@ const StageSelector = () => {
       </div>
       <div className="py-1 px-4 rounded-2xl flex flex-col font-semibold text-sm text-helplit2 items-start gap-2">
         <>
+          <div
+            onClick={() => setStage("HELPLIT")}
+            className="bg-white rounded-full py-1 px-2 gap-1 text-helplit2 flex flex-row hover:opacity-90 cursor-pointer"
+          >
+            <FireSimple size={22} weight="bold" />
+            <p>Festival</p>
+          </div>
           <div
             onClick={() => setStage("APR_LUD")}
             className="bg-white rounded-full py-1 px-2 gap-1 text-aprenlud2 flex flex-row hover:opacity-90 cursor-pointer"
