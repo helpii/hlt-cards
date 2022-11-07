@@ -11,9 +11,12 @@ import {
   User,
 } from "phosphor-react";
 
+import { useStage } from "../../contexts/StageContext";
+
 export function Home() {
   const [litIndex, setLitIndex] = useState(0);
   const [litList, setLitList] = useState(lits);
+  const [choosingStage, setChoosingStage] = useState(false);
 
   function updateLitList() {
     setLitIndex(0);
@@ -26,7 +29,7 @@ export function Home() {
       {/*GradientBG //use custom styling with classnames*/}
       <div
         className={shift(
-          "transition-colors ease-in-out flex flex-col justify-center items-center h-[100vh] w-[100%]",
+          "transition-colors ease-in-out flex flex-col p-6 items-center justify-center h-[100vh] w-[100%]",
           {
             "bg-aprenlud": lits[litIndex].author === "Helplit",
             "bg-salainv": lits[litIndex].author === "Tamara",
@@ -37,7 +40,7 @@ export function Home() {
         {/*LitCard*/}
         <div
           className={shift(
-            "rounded-b-[30px] border-b-8 hover:bg-[#f7f7f7] justify-between border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h-[500px] max-h-[80vh] mb-8 flex flex-col justify-center items-center transition-colors",
+            "rounded-b-[30px] border-b-8 hover:bg-[#f7f7f7] border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h-[500px] max-h-[80vh] mb-4 flex flex-col justify-between items-center transition-colors",
             {
               "hover:border-aprenlud1": lits[litIndex].author === "Helplit",
               "hover:border-salainv1": lits[litIndex].author === "Tamara",
@@ -70,7 +73,7 @@ export function Home() {
           <div className="w-[100%] mt-2 flex flex-row justify-between items-center">
             <div
               className={shift(
-                " font-semibold flex flex-row gap-1 items-center ",
+                "font-semibold flex flex-row gap-1 items-center ",
                 {
                   "text-aprenlud2": lits[litIndex].author === "Helplit",
                   "text-salainv2": lits[litIndex].author === "Tamara",
@@ -78,8 +81,8 @@ export function Home() {
                 }
               )}
             >
-              <div className="bg-helpii_sm w-8 h-8 bg-cover rounded"></div>
-              <p>@helpii</p>
+              <div className="bg-helplit_sm w-6 h-6 bg-cover rounded-md"></div>
+              <p>@helplit</p>
             </div>
             <div
               className={shift(
@@ -102,7 +105,7 @@ export function Home() {
         {/*NavigationOptions*/}
         <div className="w-[100%] max-w-[401px] flex flex-row text-white justify-between items-center ">
           {/*Gibberish*/}
-          <div className="flex flex-row  gap-2 ">
+          <div className="flex flex-row gap-2">
             <button
               onClick={() => {
                 if (litIndex > 0) {
@@ -115,7 +118,7 @@ export function Home() {
               <User
                 size={32}
                 weight="bold"
-                className="rounded-full hover:opacity-80 bg-white text-[#9c9c9c] p-1"
+                className="ml-1 rounded-full hover:opacity-80 bg-white text-[#9c9c9c] p-1"
               />
             </button>
             <button
