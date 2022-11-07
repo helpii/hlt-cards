@@ -37,7 +37,7 @@ export function Home() {
         {/*LitCard*/}
         <div
           className={shift(
-            "rounded-b-[30px] border-b-8 hover:bg-[#f7f7f7] border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
+            "rounded-b-[30px] border-b-8 hover:bg-[#f7f7f7] justify-between border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h-[500px] max-h-[80vh] mb-8 flex flex-col justify-center items-center transition-colors",
             {
               "hover:border-aprenlud1": lits[litIndex].author === "Helplit",
               "hover:border-salainv1": lits[litIndex].author === "Tamara",

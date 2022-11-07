@@ -10,7 +10,7 @@ export default [
   },
   {
     title: "O dia em que o H fugiu do alfabeto.",
-    subtitle: "Fugiu por quê? Para onde foi? Investigue com a turma.",
+    subtitle: "Fugiu por quê? Para onde foi?",
     author: "Rosangela",
     stage: "Pensamento Computacional",
     picturePath: "/litImages/h1.png",
