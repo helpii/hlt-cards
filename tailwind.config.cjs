@@ -18,7 +18,6 @@ module.exports = {
         'pencomput2': '#2cb865',
       },
       backgroundImage: {
-        galaxy: 'url("/background-galaxy.png")',
         helplit: 'url("/helplit.png")',
         helpii_sm: 'url("/helpii_sm.png")',
         'aprenlud': 'linear-gradient(180deg, #fbc366, #f27d54)',

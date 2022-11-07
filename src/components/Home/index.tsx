@@ -2,7 +2,14 @@ import lits from "../../lib/lits";
 //import lits especificas pra cada palco
 import { useState } from "react";
 import shift from "classnames";
-import { ArrowCircleLeft, ArrowCircleRight, StackSimple } from "phosphor-react";
+import {
+  ArrowCircleLeft,
+  ArrowCircleRight,
+  GearSix,
+  MagnifyingGlass,
+  StackSimple,
+  User,
+} from "phosphor-react";
 
 export function Home() {
   const [litIndex, setLitIndex] = useState(0);
@@ -30,7 +37,7 @@ export function Home() {
         {/*LitCard*/}
         <div
           className={shift(
-            "rounded-b-[30px] border-b-8 border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
+            "rounded-b-[30px] border-b-8 hover:bg-[#f7f7f7] border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h[500px] mb-8 flex flex-col justify-center items-center transition-colors",
             {
               "hover:border-aprenlud1": lits[litIndex].author === "Helplit",
               "hover:border-salainv1": lits[litIndex].author === "Tamara",
@@ -93,39 +100,115 @@ export function Home() {
         </div>
 
         {/*NavigationOptions*/}
-        <div className="flex flex-row text-white">
-          {/*PreviousCardButton*/}
-          <button
-            onClick={() => {
-              if (litIndex > 0) {
-                setLitIndex(litIndex - 1);
-              } else {
-                setLitIndex(lits.length - 1);
-              }
-            }}
-          >
-            <ArrowCircleLeft
-              size={48}
-              weight="bold"
-              className="hover:opacity-80"
-            />
-          </button>
-          {/*NextCardButton*/}
-          <button
-            onClick={() => {
-              if (litIndex < lits.length - 1) {
-                setLitIndex(litIndex + 1);
-              } else {
-                setLitIndex(0);
-              }
-            }}
-          >
-            <ArrowCircleRight
-              size={48}
-              weight="bold"
-              className="hover:opacity-80"
-            />
-          </button>
+        <div className="w-[100%] max-w-[401px] flex flex-row text-white justify-between items-center ">
+          {/*Gibberish*/}
+          <div className="flex flex-row  gap-2 ">
+            <button
+              onClick={() => {
+                if (litIndex > 0) {
+                  setLitIndex(litIndex - 1);
+                } else {
+                  setLitIndex(lits.length - 1);
+                }
+              }}
+            >
+              <User
+                size={32}
+                weight="bold"
+                className="rounded-full hover:opacity-80 bg-white text-[#9c9c9c] p-1"
+              />
+            </button>
+            <button
+              onClick={() => {
+                if (litIndex > 0) {
+                  setLitIndex(litIndex - 1);
+                } else {
+                  setLitIndex(lits.length - 1);
+                }
+              }}
+            >
+              <GearSix
+                size={32}
+                weight="bold"
+                className="rounded-full hover:opacity-80 bg-white text-[#9c9c9c] p-1"
+              />
+            </button>
+          </div>
+
+          {/*Elaborate actions*/}
+          <div className="flex flex-row  gap-4 ">
+            <button
+              onClick={() => {
+                if (litIndex > 0) {
+                  setLitIndex(litIndex - 1);
+                } else {
+                  setLitIndex(lits.length - 1);
+                }
+              }}
+            >
+              <StackSimple
+                size={40}
+                weight="bold"
+                className={shift("rounded-full hover:opacity-80 bg-white p-1", {
+                  "text-aprenlud2": lits[litIndex].author === "Helplit",
+                  "text-salainv2": lits[litIndex].author === "Tamara",
+                  "text-pencomput2": lits[litIndex].author === "Rosangela",
+                })}
+              />
+            </button>
+            <button
+              onClick={() => {
+                if (litIndex > 0) {
+                  setLitIndex(litIndex - 1);
+                } else {
+                  setLitIndex(lits.length - 1);
+                }
+              }}
+            >
+              <MagnifyingGlass
+                size={40}
+                weight="bold"
+                className={shift("rounded-full hover:opacity-80 bg-white p-1", {
+                  "text-aprenlud2": lits[litIndex].author === "Helplit",
+                  "text-salainv2": lits[litIndex].author === "Tamara",
+                  "text-pencomput2": lits[litIndex].author === "Rosangela",
+                })}
+              />
+            </button>
+          </div>
+          {/*Immediate actions*/}
+          <div className="flex flex-row  gap-2 ">
+            <button
+              onClick={() => {
+                if (litIndex > 0) {
+                  setLitIndex(litIndex - 1);
+                } else {
+                  setLitIndex(lits.length - 1);
+                }
+              }}
+            >
+              <ArrowCircleLeft
+                size={48}
+                weight="bold"
+                className="hover:opacity-80"
+              />
+            </button>
+            <button
+              onClick={() => {
+                if (litIndex < lits.length - 1) {
+                  setLitIndex(litIndex + 1);
+                } else {
+                  setLitIndex(0);
+                }
+              }}
+            >
+              <ArrowCircleRight
+                size={48}
+                weight="bold"
+                className="hover:opacity-80"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </>
