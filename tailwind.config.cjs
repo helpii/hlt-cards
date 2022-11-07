@@ -20,6 +20,7 @@ module.exports = {
       backgroundImage: {
         galaxy: 'url("/background-galaxy.png")',
         helplit: 'url("/helplit.png")',
+        helpii_sm: 'url("/helpii_sm.png")',
         'aprenlud': 'linear-gradient(180deg, #fbc366, #f27d54)',
         'salainv': 'linear-gradient(180deg, #74bcd8, #2e95be)',
         'pen-comput': 'linear-gradient(180deg, #74d888, #2cb865)',
