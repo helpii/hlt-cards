@@ -5,7 +5,8 @@ export default [
     author: "Helplit",
     stage: "ALUD",
     picturePath: "/litImages/h0.png",
-    classPlanUrl: "https://helplit.com.br",
+    classPlanUrl:
+      "https://drive.google.com/file/d/1nyjKswT88za2yhhiUtgEixGXowzhGNMN/view?usp=share_link",
   },
   {
     title: "O dia em que o H sumiu do alfabeto",
@@ -13,6 +14,7 @@ export default [
     author: "Helplit",
     stage: "ALUD",
     picturePath: "/litImages/h0.png",
-    classPlanUrl: "https://helplit.com.br",
+    classPlanUrl:
+      "https://drive.google.com/file/d/1nyjKswT88za2yhhiUtgEixGXowzhGNMN/view?usp=share_link",
   },
 ].sort(() => Math.random() - 0.5);

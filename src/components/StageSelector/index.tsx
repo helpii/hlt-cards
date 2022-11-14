@@ -1,5 +1,5 @@
 import { useStage } from "../../contexts/StageContext";
-import { FireSimple, HandPalm, Robot, Rocket } from "phosphor-react";
+import { FireSimple, HandPalm, Lightning, Rocket } from "phosphor-react";
 
 export function StageSelector() {
   const { setStage } = useStage();
@@ -30,7 +30,7 @@ export function StageSelector() {
             onClick={() => setStage("PCOM")}
             className="bg-white rounded-full py-1 px-2 gap-1 text-PCOM_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
-            <Robot size={22} weight="bold" />
+            <Lightning size={22} weight="bold" />
             <p>Pensamento Computacional</p>
           </div>
           <div

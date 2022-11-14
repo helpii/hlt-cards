@@ -98,7 +98,9 @@ export function NavOptions() {
           <ArrowCircleLeft
             size={48}
             weight="bold"
-            className="hover:opacity-80"
+            className={shift("hover:opacity-80", {
+              "hover:opacity-100 cursor-not-allowed": choosing,
+            })}
           />
         </button>
         <button
@@ -113,7 +115,9 @@ export function NavOptions() {
           <ArrowCircleRight
             size={48}
             weight="bold"
-            className="hover:opacity-80"
+            className={shift("hover:opacity-80", {
+              "hover:opacity-100 cursor-not-allowed": choosing,
+            })}
           />
         </button>
       </div>
