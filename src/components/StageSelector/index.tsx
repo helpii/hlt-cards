@@ -10,32 +10,32 @@ export function StageSelector() {
         <p className="">leve-me a um palco</p>
         <p className="rotate-90 font-semibold">:)</p>
       </div>
-      <div className="py-1 px-4 rounded-2xl flex flex-col font-semibold text-sm text-helplit2 items-start gap-2">
+      <div className="py-1 px-4 rounded-2xl flex flex-col font-semibold text-sm text-HELP_stronk items-start gap-2">
         <>
           <div
             onClick={() => setStage("HELPLIT")}
-            className="bg-white rounded-full py-1 px-2 gap-1 text-helplit2 flex flex-row hover:opacity-90 cursor-pointer"
+            className="bg-white rounded-full py-1 px-2 gap-1 text-HELP_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
             <FireSimple size={22} weight="bold" />
             <p>Festival</p>
           </div>
           <div
             onClick={() => setStage("APR_LUD")}
-            className="bg-white rounded-full py-1 px-2 gap-1 text-aprenlud2 flex flex-row hover:opacity-90 cursor-pointer"
+            className="bg-white rounded-full py-1 px-2 gap-1 text-ALUD_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
             <Rocket size={22} weight="bold" />
             <p>Aprendizagem Lúdica</p>
           </div>
           <div
             onClick={() => setStage("PEN_COM")}
-            className="bg-white rounded-full py-1 px-2 gap-1 text-pencomput2 flex flex-row hover:opacity-90 cursor-pointer"
+            className="bg-white rounded-full py-1 px-2 gap-1 text-PCOM_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
             <Robot size={22} weight="bold" />
             <p>Pensamento Computacional</p>
           </div>
           <div
             onClick={() => setStage("SAL_INV")}
-            className="bg-white rounded-full py-1 px-2 gap-1 text-salainv2 flex flex-row hover:opacity-90 cursor-pointer"
+            className="bg-white rounded-full py-1 px-2 gap-1 text-SINV_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
             <HandPalm size={22} weight="bold" />
             <p>Sala Invertida</p>

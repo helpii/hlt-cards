@@ -54,11 +54,11 @@ export function NavOptions() {
             size={40}
             weight="bold"
             className={shift(
-              "text-helplit2 rounded-full hover:opacity-80 bg-white p-1",
+              "text-HELP_stronk rounded-full hover:opacity-80 bg-white p-1",
               {
-                "text-aprenlud2": stage === "APR_LUD",
-                "text-salainv2": stage === "SAL_INV",
-                "text-pencomput2": stage === "PEN_COM",
+                "text-ALUD_stronk": stage === "APR_LUD",
+                "text-SINV_stronk": stage === "SAL_INV",
+                "text-PCOM_stronk": stage === "PEN_COM",
               }
             )}
           />
@@ -74,11 +74,11 @@ export function NavOptions() {
             size={40}
             weight="bold"
             className={shift(
-              "text-helplit2 rounded-full hover:opacity-80 bg-white p-1",
+              "text-HELP_stronk rounded-full hover:opacity-80 bg-white p-1",
               {
-                "text-aprenlud2": stage === "APR_LUD",
-                "text-salainv2": stage === "SAL_INV",
-                "text-pencomput2": stage === "PEN_COM",
+                "text-ALUD_stronk": stage === "APR_LUD",
+                "text-SINV_stronk": stage === "SAL_INV",
+                "text-PCOM_stronk": stage === "PEN_COM",
               }
             )}
           />

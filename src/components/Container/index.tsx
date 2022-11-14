@@ -10,11 +10,11 @@ export function Container({ children }: Props) {
   return (
     <div
       className={shift(
-        "select-none bg-helplit transition-colors ease-in-out flex flex-col p-6 items-center justify-center h-[100vh] w-[100%]",
+        "select-none bg-HELP transition-colors ease-in-out flex flex-col p-6 items-center justify-center h-[100vh] w-[100%]",
         {
-          "bg-aprenlud": stage === "APR_LUD",
-          "bg-salainv": stage === "SAL_INV",
-          "bg-pen-comput": stage === "PEN_COM",
+          "bg-ALUD": stage === "APR_LUD",
+          "bg-SINV": stage === "SAL_INV",
+          "bg-PCOM": stage === "PEN_COM",
         }
       )}
     >
