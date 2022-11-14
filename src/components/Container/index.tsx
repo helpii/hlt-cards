@@ -12,9 +12,9 @@ export function Container({ children }: Props) {
       className={shift(
         "select-none bg-HELP transition-colors ease-in-out flex flex-col p-6 items-center justify-center h-[100vh] w-[100%]",
         {
-          "bg-ALUD": stage === "APR_LUD",
-          "bg-SINV": stage === "SAL_INV",
-          "bg-PCOM": stage === "PEN_COM",
+          "bg-ALUD": stage === "ALUD",
+          "bg-SINV": stage === "SINV",
+          "bg-PCOM": stage === "PCOM",
         }
       )}
     >

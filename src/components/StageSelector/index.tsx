@@ -20,21 +20,21 @@ export function StageSelector() {
             <p>Festival</p>
           </div>
           <div
-            onClick={() => setStage("APR_LUD")}
+            onClick={() => setStage("ALUD")}
             className="bg-white rounded-full py-1 px-2 gap-1 text-ALUD_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
             <Rocket size={22} weight="bold" />
             <p>Aprendizagem Lúdica</p>
           </div>
           <div
-            onClick={() => setStage("PEN_COM")}
+            onClick={() => setStage("PCOM")}
             className="bg-white rounded-full py-1 px-2 gap-1 text-PCOM_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
             <Robot size={22} weight="bold" />
             <p>Pensamento Computacional</p>
           </div>
           <div
-            onClick={() => setStage("SAL_INV")}
+            onClick={() => setStage("SINV")}
             className="bg-white rounded-full py-1 px-2 gap-1 text-SINV_stronk flex flex-row hover:opacity-90 cursor-pointer"
           >
             <HandPalm size={22} weight="bold" />
