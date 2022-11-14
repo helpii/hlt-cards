@@ -41,7 +41,7 @@ export function LitDeck() {
   return (
     <div
       className={shift(
-        "rounded-b-[30px] hover:border-HELP_weak border-b-8 hover:bg-[#f7f7f7] border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h-[500px] max-h-[80vh] mb-4 flex flex-col justify-between items-center transition-colors",
+        "rounded-b-[30px] group hover:border-HELP_weak border-b-8 hover:bg-[#f7f7f7] border-[#b9b9b9] hover:cursor-pointer rounded-xl max-w-[90%] bg-white w-[401px] p-2 h-[500px] max-h-[80vh] mb-4 flex flex-col justify-between items-center transition-colors",
         {
           "hover:border-SINV_weak": stage === "SINV",
           "hover:border-ALUD_weak": stage === "ALUD",
@@ -49,6 +49,19 @@ export function LitDeck() {
         }
       )}
     >
+      <div
+        className={shift(
+          "group-hover:bg-[#f7f7f7] absolute self-start rounded-br-lg bg-white p-2 text-HELP_stronk font-semibold flex flex-row gap-2 items-center transition-colors",
+          {
+            "text-ALUD_stronk": stage === "ALUD",
+            "text-SINV_stronk": stage === "SINV",
+            "text-PCOM_stronk": stage === "PCOM",
+          }
+        )}
+      >
+        <div className="bg-helplit_sm w-8 h-8 bg-cover rounded-full"></div>
+        <p>@helplit</p>
+      </div>
       <a href={litList[drawed].classPlanUrl} target="blank">
         <img
           className="rounded-lg"
@@ -71,17 +84,7 @@ export function LitDeck() {
         <p>{litList[drawed].subtitle}</p>
       </div>
       {/*Card Footer Info*/}
-      <div className="text-HELP_stronk w-[100%] mt-2 flex flex-row justify-between items-center">
-        <div
-          className={shift("font-semibold flex flex-row gap-1 items-center ", {
-            "text-ALUD_stronk": stage === "ALUD",
-            "text-SINV_stronk": stage === "SINV",
-            "text-PCOM_stronk": stage === "PCOM",
-          })}
-        >
-          <div className="bg-helplit_sm w-8 h-8 bg-cover rounded-full"></div>
-          <p>@helplit</p>
-        </div>
+      <div className=" w-[100%] mt-2 flex flex-row justify-center items-center">
         <div
           className={shift(
             "py-1 px-4 rounded-2xl text-clip overflow-hidden font-semibold text-sm text-white flex flex-row items-center gap-2",
