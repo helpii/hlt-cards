@@ -6,7 +6,7 @@ export default [
     stage: "ALUD",
     picturePath: "/litImages/h0.png",
     classPlanUrl:
-      "https://drive.google.com/file/d/1nyjKswT88za2yhhiUtgEixGXowzhGNMN/view?usp=share_link",
+      "https://drive.google.com/file/d/1ROHL15wpgAWvv2M54H5aVLsM2zbWc49j/view?usp=share_link",
   },
   {
     title: "Nasce um Robô",
