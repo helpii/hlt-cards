@@ -5,7 +5,7 @@ export default [
       "Aprenda sobre as histórias mais inspiradoras para os alunos... e cuidado com os spoilers!",
     author: "Tamara",
     stage: "SINV",
-    picturePath: "/litImages/h2.png",
+    picturePath: "/litImages/desenho.png",
     classPlanUrl:
       "https://drive.google.com/file/d/1X6T1aS5LBmhQaG2BoVMv3zyM6f6wYyv-/view?usp=share_link",
   },
@@ -15,7 +15,7 @@ export default [
       "Aprenda sobre as histórias mais inspiradoras para os alunos... e cuidado com os spoilers!",
     author: "Tamara",
     stage: "SINV",
-    picturePath: "/litImages/h2.png",
+    picturePath: "/litImages/desenho.png",
     classPlanUrl:
       "https://drive.google.com/file/d/1X6T1aS5LBmhQaG2BoVMv3zyM6f6wYyv-/view?usp=share_link",
   },

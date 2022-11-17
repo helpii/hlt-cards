@@ -1,5 +1,13 @@
 import { useStage } from "../../contexts/StageContext";
-import { FireSimple, HandPalm, Lightning, Rocket } from "phosphor-react";
+import {
+  Chats,
+  FireSimple,
+  HandPalm,
+  Lightning,
+  Palette,
+  Rocket,
+  Sword,
+} from "phosphor-react";
 
 export function StageSelector() {
   const { setStage } = useStage();
@@ -25,6 +33,27 @@ export function StageSelector() {
           >
             <Rocket size={22} weight="bold" />
             <p>Aprendizagem Lúdica</p>
+          </div>
+          <div
+            onClick={() => setStage("ABPJ")}
+            className="bg-white rounded-full py-1 px-2 gap-1 text-SINV_stronk flex flex-row hover:opacity-90 cursor-pointer"
+          >
+            <Palette size={22} weight="bold" />
+            <p>Aprendizagem Baseada em Projetos</p>
+          </div>
+          <div
+            onClick={() => setStage("DEBA")}
+            className="bg-white rounded-full py-1 px-2 gap-1 text-ALUD_stronk flex flex-row hover:opacity-90 cursor-pointer"
+          >
+            <Chats size={22} weight="bold" />
+            <p>Debate</p>
+          </div>
+          <div
+            onClick={() => setStage("ROLE")}
+            className="bg-white rounded-full py-1 px-2 gap-1 text-PCOM_stronk flex flex-row hover:opacity-90 cursor-pointer"
+          >
+            <Sword size={22} weight="bold" />
+            <p>Role Play</p>
           </div>
           <div
             onClick={() => setStage("PCOM")}

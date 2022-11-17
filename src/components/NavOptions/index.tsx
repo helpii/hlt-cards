@@ -56,9 +56,9 @@ export function NavOptions() {
             className={shift(
               "text-HELP_stronk rounded-full hover:opacity-80 bg-white p-1",
               {
-                "text-ALUD_stronk": stage === "ALUD",
-                "text-SINV_stronk": stage === "SINV",
-                "text-PCOM_stronk": stage === "PCOM",
+                "text-ALUD_stronk": stage === "ALUD" || stage === "DEBA",
+                "text-SINV_stronk": stage === "SINV" || stage === "ABPJ",
+                "text-PCOM_stronk": stage === "PCOM" || stage === "ROLE",
               }
             )}
           />
@@ -76,9 +76,9 @@ export function NavOptions() {
             className={shift(
               "text-HELP_stronk rounded-full hover:opacity-80 bg-white p-1",
               {
-                "text-ALUD_stronk": stage === "ALUD",
-                "text-SINV_stronk": stage === "SINV",
-                "text-PCOM_stronk": stage === "PCOM",
+                "text-ALUD_stronk": stage === "ALUD" || stage === "DEBA",
+                "text-SINV_stronk": stage === "SINV" || stage === "ABPJ",
+                "text-PCOM_stronk": stage === "PCOM" || stage === "ROLE",
               }
             )}
           />

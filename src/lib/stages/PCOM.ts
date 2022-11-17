@@ -4,7 +4,7 @@ export default [
     subtitle: "Promova a evolução do mais novo colega de metal dos alunos.",
     author: "Rosangela",
     stage: "PCOM",
-    picturePath: "/litImages/h1.png",
+    picturePath: "/litImages/robo.png",
     classPlanUrl: "https://helplit.com.br",
   },
   {
@@ -12,7 +12,7 @@ export default [
     subtitle: "Promova a evolução do mais novo colega de metal dos alunos.",
     author: "Rosangela",
     stage: "PCOM",
-    picturePath: "/litImages/h1.png",
+    picturePath: "/litImages/robo.png",
     classPlanUrl: "https://helplit.com.br",
   },
 ].sort(() => Math.random() - 0.5);
